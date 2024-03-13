@@ -1,6 +1,12 @@
 import secrets
 import base64
 from fastapi import HTTPException, status, Request
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+print(os.getenv("BASIC_API_KEY"))
 
 
 def get_basic_api_key(request: Request):
@@ -38,8 +44,8 @@ def read_token():
     Returns:
         str: API key
     """
-    with open("authentication/basic_api_key.txt", "r") as file:
-        return file.read().strip()
+    # load the API key from the environment variable
+    return os.getenv("BASIC_API_KEY")
 
 
 def create_and_encode_api_key():
@@ -66,6 +72,5 @@ def write_token():
         str: API key
     """
     api_key = create_and_encode_api_key()
-    with open("basic_api_key.txt", "w") as file:
-        file.write(api_key)
-    return api_key
+    # write the API key to the environment variable
+    os.environ["BASIC_API_KEY"] = api_key
