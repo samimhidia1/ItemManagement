@@ -13,3 +13,5 @@ database/items.db
 .venv
 
 __pycache__
+
+.env
