@@ -11,3 +11,5 @@ identifier.sqlite
 items.db
 
 .venv
+
+__pycache__/*
