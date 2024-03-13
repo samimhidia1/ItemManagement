@@ -7,8 +7,8 @@ gen
 authentication/basic_api_key.txt
 authentication/bearer_api_key.txt
 
-identifier.sqlite
-items.db
+database/identifier.sqlite
+database/items.db
 
 .venv
 

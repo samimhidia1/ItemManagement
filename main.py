@@ -1,9 +1,8 @@
-import sentry_sdk
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.responses import FileResponse
 from authentication.api_key import get_basic_api_key
-from database import save_item, get_db, get_item_by_id, list_items, update_item_by_id, delete_item_by_id
-from models import Item
+from database.database import save_item, get_db, get_item_by_id, list_items, update_item_by_id, delete_item_by_id
+from database.models import Item
 
 app = FastAPI(
     title="Item Management API for GPTs",
@@ -59,4 +58,4 @@ async def delete_item(item_id: int, db=Depends(get_db)):
 
 @app.get("/privacy-policy")
 async def privacy_policy():
-    return FileResponse("privacy_policy.html")
+    return FileResponse("templates/privacy_policy.html")

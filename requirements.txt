@@ -1,4 +1,3 @@
 fastapi
 uvicorn
 aiosqlite
-sentry-sdk[fastapi]
