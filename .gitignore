@@ -5,9 +5,6 @@ out
 gen
 .env
 
-authentication/basic_api_key.txt
-authentication/bearer_api_key.txt
-
 database/identifier.sqlite
 database/items.db
 
