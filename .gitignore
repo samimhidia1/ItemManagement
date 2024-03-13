@@ -6,3 +6,11 @@
 *.iml
 out
 gen
+
+authentication/basic_api_key.txt
+authentication/bearer_api_key.txt
+
+identifier.sqlite
+items.db
+
+.venv
